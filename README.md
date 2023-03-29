@@ -29,21 +29,23 @@ but it is not necessarily 100% accurate. Moreover, the car make and model list w
 makes and models which were frequent in the dataset but not in the model. The files in the data folder are all final, 
 including our own additions.
 
-## Ethical Analysis
+## Ethical Analysis, Bias, and weaknesses of the project
 
 While scraping the data from marktplaats.nl, we got denied access after about 50 requests. As a consequence of this, we were limited by the amount of listings we could scrape per day. This is likely implemented by marktplaats on purpose to either protect from potential DDOS attacks, or perhaps even to prevent people from scraping their data.
 
-Why would marktplaats not want their data scraped? Most listings are made by actual people, and to list something, you must be logged in. If you were to scrape one persons listings, and keep track of those, you could learn things about that person, especially since people have their town linked too. Realistically, this is not a big issue, as one could also just look at someones profile and look at their listings. Also, in this implementation, the scraped data is shared with no one, and the data is not used in a harmful way. We do scrape the sellers name, but this was only used to filter out companies. It could be deleted now, and would likely be smart, when looking at the ethical side of things.
+Why would marktplaats not want their data scraped? Most listings are made by actual people, and to list something, you must be logged in. If you were to scrape one person's listings, and keep track of those, you could learn things about that person, especially since people have their town linked too. Realistically, this is not a big issue, as one could also just look at someones profile and look at their listings. Also, in this implementation, the scraped data is shared with no one, and the data is not used in a harmful way. We do scrape the sellers name, but this was only used to filter out companies. It could be deleted now, and would likely be smart, when looking at the ethical side of things.
 
 The second ethical consideration is part of the regression model. If we were to deploy the model and have people use it to hint them toward the price they should sell their car for, would the developers be held accountable for inaccurate predictions? Of course, the model could underprice someone's vehicle, and if they were reckless and would not research the price further, they could lose a large amount of money.
 
 If a deployment were to be made, clear terms and conditions would need to be specified, and it should be made clear to the user that the price is merely an indication.
 
-
-## Bias, and weaknesses of the data
 A form of bias in the model is that people often list their vehicles for more money than they are worth, which leaves room for negotiation between the seller and the buyer.
 If someone were to check what a fair price would be for a specific vehicle, they must realize that the prices that the model
 was trained on are likely biased in the sellers favour, as we only look at listings, not actual sales.
 
 During COVID and the global chip shortage have seen second hand vehicles prices increase vastly, in order to make the model 
 future-proof, it would have to be retrained periodically on current prices to follow the market.
+
+
+## Questions?
+Please send an e-mail to d.pasic@student.maastrichtuniversity.nl
